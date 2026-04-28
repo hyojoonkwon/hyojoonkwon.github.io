@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — YJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-inner">
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">YJ<span class="logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="kr">KR</button>
+      </div>
+      <button class="nav-menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">Close</button>
+    <ul>
+      <li><a href="about.html" class="mobile-link">About</a></li>
+      <li><a href="projects.html" class="mobile-link">Projects</a></li>
+      <li><a href="tools.html" class="mobile-link">Tools</a></li>
+      <li><a href="blog.html" class="mobile-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="page-main">
+    <div class="page-header">
+      <span class="page-index">05</span>
+      <h1 class="page-title">Blog</h1>
+    </div>
+
+    <div class="section-inner">
+      <div class="blog-list">
+
+        <a href="blog/post-01.html" class="blog-item">
+          <div class="blog-meta">
+            <span class="blog-date">2026. 04. 28</span>
+            <span class="blog-tag">Process</span>
+          </div>
+          <div class="blog-body">
+            <h2 class="blog-title"
+                data-en="Why I Started Automating Revit"
+                data-kr="내가 Revit 자동화를 시작한 이유">Why I Started Automating Revit</h2>
+            <p class="blog-excerpt"
+               data-en="A look back at the moment I realised I was spending more time on repetitive tasks than actual design — and what I decided to do about it."
+               data-kr="실제 설계보다 반복 작업에 더 많은 시간을 쓰고 있다는 걸 깨달았던 순간을 돌아보며, 그 이후 어떤 결정을 내렸는지 이야기합니다.">
+              A look back at the moment I realised I was spending more time on repetitive tasks than actual design — and what I decided to do about it.
+            </p>
+          </div>
+          <span class="blog-arrow">↗</span>
+        </a>
+
+        <a href="blog/post-02.html" class="blog-item">
+          <div class="blog-meta">
+            <span class="blog-date">2026. 04. 20</span>
+            <span class="blog-tag">Revit API</span>
+          </div>
+          <div class="blog-body">
+            <h2 class="blog-title"
+                data-en="Dynamo vs Python for BIM Automation"
+                data-kr="BIM 자동화: Dynamo vs Python">Dynamo vs Python for BIM Automation</h2>
+            <p class="blog-excerpt"
+               data-en="When does it make sense to use Dynamo, and when should you drop down to Python? My honest take after using both on real projects."
+               data-kr="Dynamo를 쓰는 게 맞을 때와 Python으로 내려가야 할 때는 언제일까? 실제 프로젝트에서 둘 다 써본 솔직한 생각을 공유합니다.">
+              When does it make sense to use Dynamo, and when should you drop down to Python? My honest take after using both on real projects.
+            </p>
+          </div>
+          <span class="blog-arrow">↗</span>
+        </a>
+
+        <a href="blog/post-03.html" class="blog-item">
+          <div class="blog-meta">
+            <span class="blog-date">2026. 04. 10</span>
+            <span class="blog-tag">Grasshopper</span>
+          </div>
+          <div class="blog-body">
+            <h2 class="blog-title"
+                data-en="Using Grasshopper for Data-Driven Design"
+                data-kr="데이터 기반 설계를 위한 Grasshopper 활용">Using Grasshopper for Data-Driven Design</h2>
+            <p class="blog-excerpt"
+               data-en="How I connected a Grasshopper model to an external data source and used it to drive facade panel decisions — a step-by-step breakdown of the process."
+               data-kr="Grasshopper 모델을 외부 데이터 소스에 연결하고, 이를 파사드 패널 결정에 활용한 방법 — 과정을 단계별로 정리했습니다.">
+              How I connected a Grasshopper model to an external data source and used it to drive facade panel decisions — a step-by-step breakdown of the process.
+            </p>
+          </div>
+          <span class="blog-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">YJ<span class="logo-dot">.</span></span>
+      <span class="footer-copy">© 2026 — BIM Developer</span>
+      <div class="footer-links">
+        <a href="https://github.com/hyojoonkwon" target="_blank">GitHub</a>
+        <a href="mailto:kwonh3815@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

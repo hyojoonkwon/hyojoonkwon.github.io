@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools — YJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-inner">
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">YJ<span class="logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="tools.html" class="active">Tools</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="kr">KR</button>
+      </div>
+      <button class="nav-menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">Close</button>
+    <ul>
+      <li><a href="about.html" class="mobile-link">About</a></li>
+      <li><a href="projects.html" class="mobile-link">Projects</a></li>
+      <li><a href="tools.html" class="mobile-link">Tools</a></li>
+      <li><a href="blog.html" class="mobile-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="page-main">
+    <div class="page-header">
+      <span class="page-index">03</span>
+      <h1 class="page-title">Tools</h1>
+    </div>
+
+    <div class="section-inner">
+      <div class="tools-list">
+
+        <div class="tool-row">
+          <div class="tool-num">01</div>
+          <div class="tool-body">
+            <h3 class="tool-name"
+                data-en="RevitBatch"
+                data-kr="RevitBatch">RevitBatch</h3>
+            <p class="tool-desc"
+               data-en="A Revit add-in for batch operations — rename, renumber, and update parameters across hundreds of elements at once via a simple UI."
+               data-kr="간단한 UI를 통해 수백 개의 요소에서 한 번에 파라미터 이름 변경, 번호 재지정, 업데이트를 수행하는 Revit 애드인.">
+              A Revit add-in for batch operations — rename, renumber, and update parameters across hundreds of elements at once via a simple UI.
+            </p>
+          </div>
+          <div class="tool-stack">C# · Revit API</div>
+          <div class="tool-arrow">↗</div>
+        </div>
+
+        <div class="tool-row">
+          <div class="tool-num">02</div>
+          <div class="tool-body">
+            <h3 class="tool-name"
+                data-en="DynaFlow"
+                data-kr="DynaFlow">DynaFlow</h3>
+            <p class="tool-desc"
+               data-en="A collection of reusable Dynamo nodes and script templates for common BIM automation tasks — sheet creation, view placement, and data export."
+               data-kr="시트 생성, 뷰 배치, 데이터 내보내기 등 일반적인 BIM 자동화 작업을 위한 재사용 가능한 Dynamo 노드 및 스크립트 템플릿 모음.">
+              A collection of reusable Dynamo nodes and script templates for common BIM automation tasks — sheet creation, view placement, and data export.
+            </p>
+          </div>
+          <div class="tool-stack">Dynamo · Python</div>
+          <div class="tool-arrow">↗</div>
+        </div>
+
+        <div class="tool-row">
+          <div class="tool-num">03</div>
+          <div class="tool-body">
+            <h3 class="tool-name"
+                data-en="GH Data Bridge"
+                data-kr="GH 데이터 브릿지">GH Data Bridge</h3>
+            <p class="tool-desc"
+               data-en="A Grasshopper component library that reads from and writes to Excel and JSON, enabling structured data exchange between design models and external systems."
+               data-kr="Excel 및 JSON 읽기/쓰기를 지원하는 Grasshopper 컴포넌트 라이브러리 — 설계 모델과 외부 시스템 간 구조화된 데이터 교환을 가능하게 합니다.">
+              A Grasshopper component library that reads from and writes to Excel and JSON, enabling structured data exchange between design models and external systems.
+            </p>
+          </div>
+          <div class="tool-stack">Grasshopper · GH Python</div>
+          <div class="tool-arrow">↗</div>
+        </div>
+
+        <div class="tool-row">
+          <div class="tool-num">04</div>
+          <div class="tool-body">
+            <h3 class="tool-name"
+                data-en="BIM Exporter"
+                data-kr="BIM 익스포터">BIM Exporter</h3>
+            <p class="tool-desc"
+               data-en="A standalone WPF app that connects to an open Revit model and exports selected element data to CSV or JSON for use in external dashboards or reports."
+               data-kr="열려 있는 Revit 모델에 연결해 선택한 요소 데이터를 CSV 또는 JSON으로 내보내는 독립형 WPF 앱 — 외부 대시보드나 보고서에 활용 가능합니다.">
+              A standalone WPF app that connects to an open Revit model and exports selected element data to CSV or JSON for use in external dashboards or reports.
+            </p>
+          </div>
+          <div class="tool-stack">C# · WPF</div>
+          <div class="tool-arrow">↗</div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">YJ<span class="logo-dot">.</span></span>
+      <span class="footer-copy">© 2026 — BIM Developer</span>
+      <div class="footer-links">
+        <a href="https://github.com/hyojoonkwon" target="_blank">GitHub</a>
+        <a href="mailto:kwonh3815@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

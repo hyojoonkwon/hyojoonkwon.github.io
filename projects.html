@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — YJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-inner">
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">YJ<span class="logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="kr">KR</button>
+      </div>
+      <button class="nav-menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">Close</button>
+    <ul>
+      <li><a href="about.html" class="mobile-link">About</a></li>
+      <li><a href="projects.html" class="mobile-link">Projects</a></li>
+      <li><a href="tools.html" class="mobile-link">Tools</a></li>
+      <li><a href="blog.html" class="mobile-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="page-main">
+    <div class="page-header">
+      <span class="page-index">02</span>
+      <h1 class="page-title">Projects</h1>
+    </div>
+
+    <div class="section-inner">
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="card-thumb">
+            <div class="card-thumb-inner"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Revit API · C#</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title"
+                data-en="Revit Parameter Manager"
+                data-kr="Revit 파라미터 관리자">Revit Parameter Manager</h3>
+            <p class="card-desc"
+               data-en="A Revit plugin that batch-reads, edits, and exports element parameters across an entire model. Reduced manual data entry time by automating parameter workflows."
+               data-kr="전체 모델에서 요소 파라미터를 일괄 읽기·편집·내보내기하는 Revit 플러그인. 파라미터 작업 자동화로 수작업 데이터 입력 시간을 대폭 단축했습니다.">
+              A Revit plugin that batch-reads, edits, and exports element parameters across an entire model. Reduced manual data entry time by automating parameter workflows.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-thumb">
+            <div class="card-thumb-inner"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Dynamo · Python</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title"
+                data-en="Automated Sheet Generator"
+                data-kr="자동 시트 생성기">Automated Sheet Generator</h3>
+            <p class="card-desc"
+               data-en="A Dynamo script that auto-generates drawing sheets and places views based on a predefined Excel template. Eliminated hours of repetitive sheet setup per project."
+               data-kr="미리 정의된 Excel 템플릿을 기반으로 도면 시트를 자동 생성하고 뷰를 배치하는 Dynamo 스크립트. 프로젝트당 수 시간의 반복적인 시트 설정 작업을 자동화했습니다.">
+              A Dynamo script that auto-generates drawing sheets and places views based on a predefined Excel template. Eliminated hours of repetitive sheet setup per project.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-thumb">
+            <div class="card-thumb-inner"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Grasshopper · C#</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title"
+                data-en="Facade Panelisation Tool"
+                data-kr="파사드 패널화 툴">Facade Panelisation Tool</h3>
+            <p class="card-desc"
+               data-en="A Grasshopper definition that divides complex facade surfaces into manufacturable panels, calculates area, and exports panel data directly to a structured spreadsheet."
+               data-kr="복잡한 파사드 곡면을 제작 가능한 패널로 분할하고, 면적을 계산하며, 패널 데이터를 구조화된 스프레드시트로 직접 내보내는 Grasshopper 정의입니다.">
+              A Grasshopper definition that divides complex facade surfaces into manufacturable panels, calculates area, and exports panel data directly to a structured spreadsheet.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-thumb">
+            <div class="card-thumb-inner"></div>
+            <div class="card-overlay">
+              <span class="card-tag">C# · WPF</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title"
+                data-en="BIM Data Dashboard"
+                data-kr="BIM 데이터 대시보드">BIM Data Dashboard</h3>
+            <p class="card-desc"
+               data-en="A WPF desktop application that connects to a Revit model, extracts key project data, and visualises it in real-time charts — enabling faster design decisions."
+               data-kr="Revit 모델에 연결해 주요 프로젝트 데이터를 추출하고 실시간 차트로 시각화하는 WPF 데스크톱 애플리케이션 — 빠른 설계 의사결정을 지원합니다.">
+              A WPF desktop application that connects to a Revit model, extracts key project data, and visualises it in real-time charts — enabling faster design decisions.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">YJ<span class="logo-dot">.</span></span>
+      <span class="footer-copy">© 2026 — BIM Developer</span>
+      <div class="footer-links">
+        <a href="https://github.com/hyojoonkwon" target="_blank">GitHub</a>
+        <a href="mailto:kwonh3815@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
