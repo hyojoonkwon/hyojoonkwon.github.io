@@ -1,3 +1,28 @@
+// ── Dark mode ──
+const THEME_KEY = 'portfolio-theme';
+
+function applyTheme(theme) {
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+  const btn = document.getElementById('themeBtn');
+  if (btn) btn.textContent = theme === 'dark' ? '○' : '●';
+  localStorage.setItem(THEME_KEY, theme);
+}
+
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  applyTheme(saved || preferred);
+}
+
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    applyTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark');
+  });
+}
+
+initTheme();
+
 // ── Mobile menu ──
 const menuBtn = document.getElementById('menuBtn');
 const menuClose = document.getElementById('menuClose');
@@ -32,3 +57,43 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 initLang();
+
+// ── Blog tag filter ──
+const filterBtns = document.querySelectorAll('.filter-btn');
+const blogItems  = document.querySelectorAll('.blog-item');
+const blogGroups = document.querySelectorAll('.blog-group');
+const postCount  = document.getElementById('postCount');
+
+if (filterBtns.length) {
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      // active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      let visible = 0;
+
+      if (filter === 'all') {
+        blogItems.forEach(item => { item.style.display = ''; visible++; });
+        blogGroups.forEach(group => { group.style.display = ''; });
+      } else {
+        blogGroups.forEach(group => {
+          let groupVisible = 0;
+          group.querySelectorAll('.blog-item').forEach(item => {
+            const tags = (item.dataset.tags || '').split(' ');
+            const match = tags.includes(filter) || tags.includes(filter.replace(' ', '-'));
+            item.style.display = match ? '' : 'none';
+            if (match) { groupVisible++; visible++; }
+          });
+          group.style.display = groupVisible > 0 ? '' : 'none';
+        });
+      }
+
+      if (postCount) {
+        postCount.textContent = visible + (visible === 1 ? ' post' : ' posts');
+      }
+    });
+  });
+}

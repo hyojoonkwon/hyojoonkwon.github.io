@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>if(localStorage.getItem('portfolio-theme')==='dark'||(localStorage.getItem('portfolio-theme')==null&&window.matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark');</script>
 </head>
 <body class="page-inner">
 
@@ -25,6 +26,7 @@
         <span class="lang-sep">/</span>
         <button class="lang-btn" data-lang="kr">KR</button>
       </div>
+      <button class="theme-btn" id="themeBtn">●</button>
       <button class="nav-menu-btn" id="menuBtn">Menu</button>
     </div>
   </nav>
@@ -47,63 +49,203 @@
     </div>
 
     <div class="section-inner">
-      <div class="blog-list">
 
-        <a href="blog/post-01.html" class="blog-item">
-          <div class="blog-meta">
-            <span class="blog-date">2026. 04. 28</span>
-            <span class="blog-tag">Process</span>
-          </div>
-          <div class="blog-body">
-            <h2 class="blog-title"
-                data-en="Why I Started Automating Revit"
-                data-kr="내가 Revit 자동화를 시작한 이유">Why I Started Automating Revit</h2>
-            <p class="blog-excerpt"
-               data-en="A look back at the moment I realised I was spending more time on repetitive tasks than actual design — and what I decided to do about it."
-               data-kr="실제 설계보다 반복 작업에 더 많은 시간을 쓰고 있다는 걸 깨달았던 순간을 돌아보며, 그 이후 어떤 결정을 내렸는지 이야기합니다.">
-              A look back at the moment I realised I was spending more time on repetitive tasks than actual design — and what I decided to do about it.
-            </p>
-          </div>
-          <span class="blog-arrow">↗</span>
-        </a>
-
-        <a href="blog/post-02.html" class="blog-item">
-          <div class="blog-meta">
-            <span class="blog-date">2026. 04. 20</span>
-            <span class="blog-tag">Revit API</span>
-          </div>
-          <div class="blog-body">
-            <h2 class="blog-title"
-                data-en="Dynamo vs Python for BIM Automation"
-                data-kr="BIM 자동화: Dynamo vs Python">Dynamo vs Python for BIM Automation</h2>
-            <p class="blog-excerpt"
-               data-en="When does it make sense to use Dynamo, and when should you drop down to Python? My honest take after using both on real projects."
-               data-kr="Dynamo를 쓰는 게 맞을 때와 Python으로 내려가야 할 때는 언제일까? 실제 프로젝트에서 둘 다 써본 솔직한 생각을 공유합니다.">
-              When does it make sense to use Dynamo, and when should you drop down to Python? My honest take after using both on real projects.
-            </p>
-          </div>
-          <span class="blog-arrow">↗</span>
-        </a>
-
-        <a href="blog/post-03.html" class="blog-item">
-          <div class="blog-meta">
-            <span class="blog-date">2026. 04. 10</span>
-            <span class="blog-tag">Grasshopper</span>
-          </div>
-          <div class="blog-body">
-            <h2 class="blog-title"
-                data-en="Using Grasshopper for Data-Driven Design"
-                data-kr="데이터 기반 설계를 위한 Grasshopper 활용">Using Grasshopper for Data-Driven Design</h2>
-            <p class="blog-excerpt"
-               data-en="How I connected a Grasshopper model to an external data source and used it to drive facade panel decisions — a step-by-step breakdown of the process."
-               data-kr="Grasshopper 모델을 외부 데이터 소스에 연결하고, 이를 파사드 패널 결정에 활용한 방법 — 과정을 단계별로 정리했습니다.">
-              How I connected a Grasshopper model to an external data source and used it to drive facade panel decisions — a step-by-step breakdown of the process.
-            </p>
-          </div>
-          <span class="blog-arrow">↗</span>
-        </a>
-
+      <!-- Tag Filter Bar -->
+      <div class="blog-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Process">Process</button>
+        <button class="filter-btn" data-filter="Revit API">Revit API</button>
+        <button class="filter-btn" data-filter="Dynamo">Dynamo</button>
+        <button class="filter-btn" data-filter="Grasshopper">Grasshopper</button>
+        <button class="filter-btn" data-filter="C#">C#</button>
+        <button class="filter-btn" data-filter="Data">Data</button>
       </div>
+
+      <!-- Post Count -->
+      <div class="blog-count">
+        <span id="postCount">8 posts</span>
+      </div>
+
+      <!-- Group: Process -->
+      <div class="blog-group" data-group="Process">
+        <div class="group-header">
+          <span class="group-name">Process</span>
+          <span class="group-tally">2 posts</span>
+        </div>
+        <div class="group-posts">
+
+          <a href="blog/post-01.html" class="blog-item" data-tags="Process">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 04. 28</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Why I Started Automating Revit"
+                  data-kr="내가 Revit 자동화를 시작한 이유">Why I Started Automating Revit</h2>
+              <p class="blog-excerpt"
+                 data-en="A look back at the moment I realised I was spending more time on repetitive tasks than actual design — and what I decided to do about it."
+                 data-kr="실제 설계보다 반복 작업에 더 많은 시간을 쓰고 있다는 걸 깨달았던 순간을 돌아보며, 그 이후 어떤 결정을 내렸는지 이야기합니다.">
+                A look back at the moment I realised I was spending more time on repetitive tasks than actual design — and what I decided to do about it.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+          <a href="blog/post-02.html" class="blog-item" data-tags="Process">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 03. 15</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="How I Structure a BIM Automation Project"
+                  data-kr="BIM 자동화 프로젝트 구조 잡는 법">How I Structure a BIM Automation Project</h2>
+              <p class="blog-excerpt"
+                 data-en="From identifying the problem to shipping the tool — the workflow I follow when building a new automation from scratch."
+                 data-kr="문제 파악부터 툴 완성까지 — 새로운 자동화를 처음부터 만들 때 제가 따르는 워크플로우를 공유합니다.">
+                From identifying the problem to shipping the tool — the workflow I follow when building a new automation from scratch.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Group: Revit API -->
+      <div class="blog-group" data-group="Revit API">
+        <div class="group-header">
+          <span class="group-name">Revit API</span>
+          <span class="group-tally">2 posts</span>
+        </div>
+        <div class="group-posts">
+
+          <a href="blog/post-03.html" class="blog-item" data-tags="Revit API">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 04. 20</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Dynamo vs Python for BIM Automation"
+                  data-kr="BIM 자동화: Dynamo vs Python">Dynamo vs Python for BIM Automation</h2>
+              <p class="blog-excerpt"
+                 data-en="When does it make sense to use Dynamo, and when should you drop down to Python? My honest take after using both on real projects."
+                 data-kr="Dynamo를 쓰는 게 맞을 때와 Python으로 내려가야 할 때는 언제일까? 실제 프로젝트에서 둘 다 써본 솔직한 생각을 공유합니다.">
+                When does it make sense to use Dynamo, and when should you drop down to Python? My honest take after using both on real projects.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+          <a href="blog/post-04.html" class="blog-item" data-tags="Revit API C#">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 02. 10</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Getting Started with the Revit API in C#"
+                  data-kr="C#으로 Revit API 시작하기">Getting Started with the Revit API in C#</h2>
+              <p class="blog-excerpt"
+                 data-en="A beginner-friendly walkthrough of setting up a Revit add-in project in Visual Studio and writing your first command."
+                 data-kr="Visual Studio에서 Revit 애드인 프로젝트를 설정하고 첫 번째 커맨드를 작성하는 과정을 초보자 눈높이에서 설명합니다.">
+                A beginner-friendly walkthrough of setting up a Revit add-in project in Visual Studio and writing your first command.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Group: Grasshopper -->
+      <div class="blog-group" data-group="Grasshopper">
+        <div class="group-header">
+          <span class="group-name">Grasshopper</span>
+          <span class="group-tally">2 posts</span>
+        </div>
+        <div class="group-posts">
+
+          <a href="blog/post-05.html" class="blog-item" data-tags="Grasshopper Data">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 04. 10</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Using Grasshopper for Data-Driven Design"
+                  data-kr="데이터 기반 설계를 위한 Grasshopper 활용">Using Grasshopper for Data-Driven Design</h2>
+              <p class="blog-excerpt"
+                 data-en="How I connected a Grasshopper model to an external data source and used it to drive facade panel decisions."
+                 data-kr="Grasshopper 모델을 외부 데이터 소스에 연결하고, 이를 파사드 패널 결정에 활용한 방법을 공유합니다.">
+                How I connected a Grasshopper model to an external data source and used it to drive facade panel decisions.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+          <a href="blog/post-06.html" class="blog-item" data-tags="Grasshopper">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 01. 22</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Writing Custom Grasshopper Components in C#"
+                  data-kr="C#으로 Grasshopper 커스텀 컴포넌트 만들기">Writing Custom Grasshopper Components in C#</h2>
+              <p class="blog-excerpt"
+                 data-en="A step-by-step guide to building your own Grasshopper component — from setting up the SDK to publishing your first custom node."
+                 data-kr="나만의 Grasshopper 컴포넌트를 만드는 단계별 가이드 — SDK 설정부터 첫 번째 커스텀 노드 배포까지.">
+                A step-by-step guide to building your own Grasshopper component — from setting up the SDK to publishing your first custom node.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Group: Data -->
+      <div class="blog-group" data-group="Data">
+        <div class="group-header">
+          <span class="group-name">Data</span>
+          <span class="group-tally">2 posts</span>
+        </div>
+        <div class="group-posts">
+
+          <a href="blog/post-07.html" class="blog-item" data-tags="Data Dynamo">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 03. 05</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Extracting BIM Data to Excel with Dynamo"
+                  data-kr="Dynamo로 BIM 데이터 Excel 추출하기">Extracting BIM Data to Excel with Dynamo</h2>
+              <p class="blog-excerpt"
+                 data-en="A practical guide to pulling element parameters from a Revit model and writing them to a structured Excel sheet using Dynamo and Python nodes."
+                 data-kr="Dynamo와 Python 노드를 활용해 Revit 모델에서 요소 파라미터를 추출하고 구조화된 Excel 시트로 작성하는 실전 가이드.">
+                A practical guide to pulling element parameters from a Revit model and writing them to a structured Excel sheet using Dynamo and Python nodes.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+          <a href="blog/post-08.html" class="blog-item" data-tags="Data C#">
+            <div class="blog-meta">
+              <span class="blog-date">2026. 02. 28</span>
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-title"
+                  data-en="Structuring BIM Data for Reporting"
+                  data-kr="보고를 위한 BIM 데이터 구조화">Structuring BIM Data for Reporting</h2>
+              <p class="blog-excerpt"
+                 data-en="How I think about organising model data — categories, parameters, and hierarchies — so it's actually useful outside of Revit."
+                 data-kr="모델 데이터를 어떻게 구성할지에 대한 생각 — 카테고리, 파라미터, 계층 구조 — Revit 외부에서도 실제로 유용하게 활용하는 방법.">
+                How I think about organising model data — categories, parameters, and hierarchies — so it's actually useful outside of Revit.
+              </p>
+            </div>
+            <span class="blog-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
     </div>
   </main>
 

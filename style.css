@@ -8,6 +8,16 @@
   --black: #111111;
   --muted: #888888;
   --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --nav-bg: rgba(255,255,255,0.92);
+}
+
+html.dark {
+  --bg: #111111;
+  --surface: #1a1a1a;
+  --border: #2a2a2a;
+  --black: #e8e8e8;
+  --muted: #606060;
+  --nav-bg: rgba(17,17,17,0.92);
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -31,7 +41,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem 3rem;
-  background: rgba(255,255,255,0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -72,6 +82,20 @@ a { color: inherit; text-decoration: none; }
 
 .lang-btn:hover { color: var(--black); }
 .lang-btn.active { color: var(--black); font-weight: 600; }
+
+/* Theme toggle */
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.theme-btn:hover { color: var(--black); }
 
 .nav-links {
   display: flex;
@@ -571,6 +595,73 @@ a { color: inherit; text-decoration: none; }
   transform: translate(2px, -2px);
 }
 
+/* ── BLOG FILTER ── */
+.blog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--border);
+  font-family: var(--font);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.filter-btn:hover { color: var(--black); border-color: var(--black); }
+
+.filter-btn.active {
+  background: var(--black);
+  color: var(--bg);
+  border-color: var(--black);
+}
+
+.blog-count {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+/* ── BLOG GROUP ── */
+.blog-group { margin-bottom: 0; }
+
+.group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1.25rem 0 0.75rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.blog-group:first-of-type .group-header { margin-top: 0; }
+
+.group-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.group-tally {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.group-posts { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
+
 /* ── BLOG LIST ── */
 .blog-list { display: flex; flex-direction: column; }
 
@@ -803,6 +894,16 @@ footer { border-top: 1px solid var(--border); }
 }
 
 .footer-links a:hover { color: var(--black); }
+
+/* ── DARK MODE OVERRIDES ── */
+html.dark .about-statement p { color: var(--muted); }
+html.dark .contact-text { color: var(--muted); }
+html.dark .post-content { color: #b0b0b0; }
+html.dark .post-content code { color: #999999; }
+html.dark .card-thumb-inner {
+  background: linear-gradient(135deg, #2a2a2a 0%, #222222 50%, #2a2a2a 100%);
+}
+html.dark .card-tag { background: rgba(17,17,17,0.9); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
