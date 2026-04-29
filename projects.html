@@ -58,9 +58,19 @@
     </div>
 
     <div class="section-inner">
-      <div class="project-grid">
 
-        <div class="project-card">
+      <!-- Filter bar -->
+      <div class="blog-filter" id="projectFilter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="bim-automation">BIM Automation</button>
+        <button class="filter-btn" data-filter="parametric">Parametric</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <div class="project-card" data-category="bim-automation">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">
@@ -79,7 +89,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="bim-automation">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">
@@ -98,7 +108,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="parametric">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">
@@ -117,7 +127,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="data">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">

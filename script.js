@@ -58,19 +58,38 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 initLang();
 
-// ── Blog tag filter ──
-const filterBtns = document.querySelectorAll('.filter-btn');
-const blogItems  = document.querySelectorAll('.blog-item');
-const blogGroups = document.querySelectorAll('.blog-group');
-const postCount  = document.getElementById('postCount');
+// ── Project category filter ──
+const projectFilter = document.getElementById('projectFilter');
+const projectCards  = document.querySelectorAll('#projectGrid .project-card');
 
-if (filterBtns.length) {
-  filterBtns.forEach(btn => {
+if (projectFilter && projectCards.length) {
+  projectFilter.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
 
-      // active state
-      filterBtns.forEach(b => b.classList.remove('active'));
+      projectFilter.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      projectCards.forEach(card => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.style.display = match ? '' : 'none';
+      });
+    });
+  });
+}
+
+// ── Blog tag filter ──
+const blogFilter  = document.getElementById('blogFilter');
+const blogItems   = document.querySelectorAll('.blog-item');
+const blogGroups  = document.querySelectorAll('.blog-group');
+const postCount   = document.getElementById('postCount');
+
+if (blogFilter && blogItems.length) {
+  blogFilter.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      blogFilter.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       let visible = 0;
