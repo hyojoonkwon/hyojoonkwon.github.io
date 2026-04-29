@@ -510,75 +510,15 @@ a { color: inherit; text-decoration: none; }
 .timeline-company {
   font-size: 0.78rem;
   font-weight: 500;
-  color: var(--black);
+  color: var(--accent);
   letter-spacing: 0.01em;
   margin-bottom: 0.45rem;
-  opacity: 0.65;
 }
 
 .timeline-desc {
   font-size: 0.82rem;
   color: var(--muted);
   line-height: 1.7;
-}
-
-/* CERTIFICATIONS */
-.cert-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.cert-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.cert-item:first-child {
-  border-top: 1px solid var(--border);
-}
-
-.cert-badge {
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--black);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 0.25rem 0.6rem;
-  white-space: nowrap;
-  min-width: 60px;
-  text-align: center;
-}
-
-.cert-info {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex: 1;
-}
-
-.cert-score {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-.cert-year {
-  font-size: 0.72rem;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-.cert-desc {
-  font-size: 0.75rem;
-  color: var(--muted);
-  text-align: right;
 }
 
 /* SKILLS */
@@ -739,10 +679,6 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-}
-
-#projectFilter {
-  margin-bottom: 3rem;
 }
 
 .filter-btn {
