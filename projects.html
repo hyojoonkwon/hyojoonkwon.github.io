@@ -58,9 +58,24 @@
     </div>
 
     <div class="section-inner">
-      <div class="project-grid">
 
-        <div class="project-card">
+      <!-- Filter bar -->
+      <div class="filter-bar" id="projectFilter">
+        <button class="filter-btn active" data-filter="all"
+                data-en="All" data-kr="전체">All</button>
+        <button class="filter-btn" data-filter="architecture"
+                data-en="Architecture" data-kr="건축 설계">Architecture</button>
+        <button class="filter-btn" data-filter="bim-automation"
+                data-en="BIM Automation" data-kr="BIM 자동화">BIM Automation</button>
+        <button class="filter-btn" data-filter="parametric"
+                data-en="Parametric" data-kr="파라메트릭">Parametric</button>
+        <button class="filter-btn" data-filter="data"
+                data-en="Data" data-kr="데이터">Data</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <div class="project-card" data-category="bim-automation">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">
@@ -79,7 +94,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="bim-automation">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">
@@ -98,7 +113,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="parametric">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">
@@ -117,7 +132,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="data">
           <div class="card-thumb">
             <div class="card-thumb-inner"></div>
             <div class="card-overlay">

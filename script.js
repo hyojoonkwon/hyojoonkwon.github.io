@@ -58,6 +58,26 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 initLang();
 
+// ── Project category filter ──
+const projectFilter = document.getElementById('projectFilter');
+const projectCards  = document.querySelectorAll('#projectGrid .project-card');
+
+if (projectFilter && projectCards.length) {
+  projectFilter.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      projectFilter.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      projectCards.forEach(card => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.style.display = match ? '' : 'none';
+      });
+    });
+  });
+}
+
 // ── Blog tag filter ──
 const filterBtns = document.querySelectorAll('.filter-btn');
 const blogItems  = document.querySelectorAll('.blog-item');
