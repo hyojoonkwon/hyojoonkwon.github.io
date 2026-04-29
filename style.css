@@ -521,6 +521,61 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.7;
 }
 
+/* CERTIFICATIONS */
+.cert-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-width: 220px;
+  flex: 1;
+}
+
+.cert-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cert-score {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.cert-year {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.cert-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
 /* SKILLS */
 .skills-grid {
   display: grid;
