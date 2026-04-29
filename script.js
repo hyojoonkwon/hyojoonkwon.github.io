@@ -79,18 +79,17 @@ if (projectFilter && projectCards.length) {
 }
 
 // ── Blog tag filter ──
-const filterBtns = document.querySelectorAll('.filter-btn');
-const blogItems  = document.querySelectorAll('.blog-item');
-const blogGroups = document.querySelectorAll('.blog-group');
-const postCount  = document.getElementById('postCount');
+const blogFilter  = document.getElementById('blogFilter');
+const blogItems   = document.querySelectorAll('.blog-item');
+const blogGroups  = document.querySelectorAll('.blog-group');
+const postCount   = document.getElementById('postCount');
 
-if (filterBtns.length) {
-  filterBtns.forEach(btn => {
+if (blogFilter && blogItems.length) {
+  blogFilter.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
 
-      // active state
-      filterBtns.forEach(b => b.classList.remove('active'));
+      blogFilter.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       let visible = 0;
